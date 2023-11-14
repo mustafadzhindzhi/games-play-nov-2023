@@ -1,16 +1,18 @@
+import { Link } from "react-router-dom" // сменяме всички <а с Link и всички href ги сменяме с to
+
 export default function Header() { 
     return (
         <header>
-        <h1><a className="home" href="#">GamesPlay</a></h1>
+        <h1><Link className="home" to="/">GamesPlay</Link></h1>
         <nav>
-            <a href="#">All games</a>
+            <Link to="/games">All games</Link>
             <div id="user">
-                <a href="#">Create Game</a>
-                <a href="#">Logout</a>
+                <a to="/games/create">Create Game</a>
+                <a to="/logout">Logout</a>
             </div>
             <div id="guest">
-                <a href="#">Login</a>
-                <a href="#">Register</a>
+                <Link to="/login">Login</Link>
+                <Link to="/register">Register</Link>
             </div>
         </nav>
     </header>
